@@ -1,0 +1,4 @@
+---
+- name: Import project tasks
+  ansible.builtin.import_tasks: project.yml
+  when: project | bool
