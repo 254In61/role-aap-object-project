@@ -1,0 +1,18 @@
+---
+# Build project object
+- name: project.yml - Create project
+  ansible.controller.project:
+    name: "{{ project }}"
+    description: "{{ description }}"
+    organization: "{{ organization }}"
+    scm_type: "{{ scm_type }}"
+    scm_url: "{{ scm_url }}"
+    scm_branch: "{{ scm_branch }}"
+    scm_credential: "{{ scm_credential }}"
+    scm_update_on_launch: true     # Perform an update to the local repository before launching a job with this project.
+    scm_update_cache_timeout: "{{ scm_update_cache_timeout }}"
+    state: present
+   
+# - name: project.ym - Wait for project synch
+#   ansible.builtin.pause:
+#     minutes: 1
