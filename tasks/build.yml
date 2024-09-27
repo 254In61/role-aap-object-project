@@ -10,10 +10,19 @@
     scm_branch: "{{ scm_branch }}"
     scm_credential: "{{ scm_credential }}"
     scm_update_on_launch: true     # Perform an update to the local repository before launching a job with this project.
-    scm_delete_on_update: true     # If there's a logs/*.log file being updated on real-time vs what's on git repo, errors will happen.
+    scm_delete_on_update: true     
     scm_update_cache_timeout: "{{ scm_update_cache_timeout }}"
     state: present
    
 # - name: project.ym - Wait for project synch
 #   ansible.builtin.pause:
 #     minutes: 1
+
+# Why scm_delete_on_update: true
+# If there's a logs/*.log file being updated on real-time vs what's on git repo, git conflicts will happen.
+# When project source control synch job fails EVERYTHING else i.e subsequent job templates will fail..ghhhhrrrr
+
+# Easiest trick is to delete the repo localy and clone again.
+# This will introduce this task in the job 'source control synch'
+# TASK [Delete project directory before update] **********************************
+# changed: [localhost]
