@@ -1,0 +1,4 @@
+---
+project_name: 00_appc-network-backup
+project_git_repo: https://domain-name/name-space/appc-config-backup.git
+project_git_branch: feature/aap-ready

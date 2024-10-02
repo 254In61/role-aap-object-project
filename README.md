@@ -27,32 +27,4 @@ Step 3: Call the role from your playbook.
 # Example
 
 ## playbook
-
----
-- name: Playbook to configure AAP
-  hosts: localhost
-  gather_facts: false
- 
-  pre_tasks:
-    - name: Include specific project variables
-      ansible.builtin.include_vars:
-        dir: group_vars
-
-  tasks:
-    !
-    !
-    - name: Import role-aap-object-project
-      ansible.builtin.import_role:
-        name: role-aap-object-project
-      vars:
-        build: true
-        project: "{{ project_name }}"
-        description: "{{ common_description }}"
-        organization: "{{ organization_name }}"
-        scm_type: git
-        scm_url: "{{ project_git_repo }}"
-        scm_branch: "{{ project_git_branch }}"
-        scm_credential: "{{ git_credential_name }}"
-        scm_update_cache_timeout: 60
-    !
-    !
+example-playbook.yml
