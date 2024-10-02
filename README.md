@@ -52,7 +52,11 @@ Step 3: Call the role from your playbook.
         scm_type: git
         scm_url: "{{ project_git_repo }}"
         scm_branch: "{{ project_git_branch }}"
-        scm_credential: "{{ git_credential[0] }}"
+        scm_credential: "{{ git_credential_name }}"
         scm_update_cache_timeout: 60
     !
     !
+# Author
+Name: Allan Maseghe
+
+Email: amaseghe@redhat.com

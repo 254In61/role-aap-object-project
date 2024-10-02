@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   role_name: role-aap-object-project
-  author: 254In61
+  author: Allan Maseghe - Redhat
   description: contains tasks to create project AAP object
   license: MIT
   min_ansible_version: "2.11"
