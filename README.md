@@ -56,7 +56,3 @@ Step 3: Call the role from your playbook.
         scm_update_cache_timeout: 60
     !
     !
-# Author
-Name: Allan Maseghe
-
-Email: amaseghe@redhat.com
