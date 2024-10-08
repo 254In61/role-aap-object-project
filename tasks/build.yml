@@ -13,6 +13,11 @@
     scm_delete_on_update: true     
     scm_update_cache_timeout: "{{ scm_update_cache_timeout }}"
     state: present
+    controller_host: "{{ controller_host }}"
+    controller_username: "{{ controller_username }}"
+    controller_password: "{{ controller_password }}"
+    validate_certs: false
+  ignore_errors: true
    
 # - name: project.ym - Wait for project synch
 #   ansible.builtin.pause:
